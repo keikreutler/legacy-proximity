@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns="//www.w3.org/1999/xhtml">
+<head>
+	<!-- Meta -->
+	<meta charset="utf-8" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+	<!-- Use the .htaccess and remove these lines to avoid edge case issues.
+		 More info: h5bp.com/i/378 -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+	<!-- Our site title and description -->
+	<title>PROX.IMITY.IO (Distant Early Warning)</title>
+	<meta name="description" content="PROX.IMITY.IO is an experimental research project for astrological inquiry into modern satellite technology and its quotidian geopolitical ramifications." />
+	<meta name="keywords" content="satellite technology, astrology, history, cold war, satellite communications, space race, satellites, omenology, ephemeris, lens, grand narratives, microchimeras, serenity" />
+	<meta name="author" content="Mt. Blisset" />
+
+	<!-- Output DocPad produced meta elements -->
+	<meta name="generator" content="DocPad v6.78.1" />
+
+	<!-- Open Graph -->
+	<meta property="og:title" content="PROX.IMITY.IO" />
+	<meta property="og:type" content="website" />
+	<meta property="og:description" content="PROX.IMITY.IO is an experimental research project for astrological inquiry into modern satellite technology and its quotidian geopolitical ramifications. " />
+	<meta property="og:tags" content="satellite technology, astrology, history, cold war, satellite communications, space race, satellites, omenology, ephemeris, lens, grand narratives, microchimeras, serenity" />
+	<meta name="author" content="Mt. Blisset" />
+	<meta property="og:url" content="http://prox.imity.io/" />
+	<meta property="og:image" content="http://prox.imity.io/images/unknown.jpg" />
+
+	<!-- Mobile viewport optimized: h5bp.com/viewport -->
+	<meta name="viewport" content="width=device-width" />
+
+	<!-- Icons -->
+	<link rel="shortcut icon" href="/images/icons/favicon.png">
+
+	<!-- Fonts -->
+	<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,700,600&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+	<!-- Shims: IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+		<script async src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- Styles -->
+	<link  rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" /><link  rel="stylesheet" href="/styles/twitter-bootstrap.css" /><link  rel="stylesheet" href="//api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.css" /><link  rel="stylesheet" href="/styles/custom.css" /><link  rel="stylesheet" href="/styles/animations.css" />
+
+
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-59785432-3', 'auto');
+		ga('send', 'pageview');
+	</script>
+	
+</head>
+<body>
+
+	<!-- Menu -->
+	<div class="navbar">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+			<div class="navbar-collapse collapse">
+				<div class="nav navbar-nav">
+					<div class="container">
+						<divclass="row">
+							<div class="col-sm-2 col-sm-offset-3"><a href="/about">About</a></div>
+							<div class="col-sm-2"><a href="/"><img src="/images/proximity_navbar.png"></a></div>
+							<div class="col-sm-2"><a href="/satellites">Satellites</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="animate" class="fadeInSoft">
+		<!-- Content -->
+		<!-- Menu -->
+<div class="navbar navbar-inverse">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+		</div>
+		<div class="navbar-collapse collapse">
+			<div class="nav navbar-nav">
+				<div class="container">
+					<div id="filters" class="row">
+						<div class="col-sm-3" id="oct042014"><a>4 October 2014</a></div>
+						<div class="col-sm-3" class="active"id="jun262015"><a>26 June 2015</a></div>
+						<div class="col-sm-3" id="oct042015"><a>4 October 2015</a></div>
+						<div class="col-sm-3" id="jun262016"><a>26 June 2016</a></div>
+					</div>
+				</div>
+			</div>
+		</div><!--/.navbar-collapse -->
+	</div>
+</div>
+
+<div class="row">
+	<div id="map" class="satellites">
+	</div>
+</div>
+
+
+<div id="modals"></div>
+
+
+	<!-- Modals -->
+	<script id="participantModalTpl" type="text/template">
+	<div id="<%- id %>" class="modal fade">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h1><%- properties.Name %></h1>
+				<% if (properties.Image !== "") { %>
+					<img src="/images/satellites/<%= properties.Image %>">
+				<% } %>
+				</div>
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-lg-8" id="<%- properties.Regex %>">
+
+						</div>
+						<div class="col-lg-4">
+							<p><strong>Type</strong><br>
+								<%- properties.Category %>
+							</p>
+							<p><strong>Owner</strong><br>
+							<%- properties.Owner %>
+							</p>
+							<p><strong>Launch Site</strong><br>
+								<%- properties["Launch Site"] %>
+							</p>
+							<p><strong>Launch Date</strong><br>
+								<%- properties["Launch Date"] %>
+							</p>
+							<p><strong>NORAD ID Number</strong><br>
+								<%- properties["NORAD ID number"] %>
+							</p>
+							<p><strong>Alternative Names</strong><br>
+								<%- properties["Alternative Names"] %>
+							</p>
+							<p><strong>Altitude</strong><br>
+								<%- properties["Altitude"] %>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</script>
+	</div>
+
+	<!-- Scripts -->
+	<script defer="defer"  src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script><script defer="defer"  src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script><script defer="defer"  src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script><script defer="defer"  src="/scripts/bootstrap-custom.js"></script><script defer="defer"  src="/scripts/modal.js"></script><script defer="defer"  src="/scripts/markdown.js"></script><script defer="defer"  src="//api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.js"></script><script defer="defer"  src="/scripts/leaflet-label.js"></script><script defer="defer"  src="//api.trello.com/1/client.js?key=31eb16d37ff9dea5bf8ec1b33e438a55"></script><script defer="defer"  src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script><script defer="defer"  src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.0/backbone-min.js"></script><script defer="defer"  src="/scripts/script.js"></script>
+
+	<script defer="defer" src="/scripts/satellites-app.js"></script>
+	<script defer="defer" src="/scripts/satellites-map.js"></script>
+
+
+
+</body>
+</html>
